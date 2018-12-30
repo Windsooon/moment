@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<!DOCTYPE html> 
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta property="og:type" content="website" />
+    {% block meta %}
+    <meta name="Description" content="记录电影，动漫时刻" />
+    <meta property="og:description" content="记录电影，动漫时刻" />
+    <meta itemprop="description" content="记录电影，动漫时刻" />
+    <meta name="keywords" content="电影, 动漫, 时刻" />
+    {% endblock meta %}
+    {% block styles %}
+    <link rel="shortcut icon" href="{% static 'imgs/bear64.png' %}"/>
+    <link rel="stylesheet" href="{% static 'css/normalize_sele.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}" />
+    {% endblock %}
+
+    {% block extra_styles %}
+    {% endblock %}
+
+    <title>
+    {% block title %}
+      电影时刻
+    {% endblock %}
+    </title>
+    {% if not debug %}
+    <script>
+    </script>
+    {% endif %}
+  </head>
+  <body>
+  {% block nav %}
+  {% endblock %}
+  
+  {% block content %}
+  {% endblock %}
+
+  {% block scripts %}
+  <script src="{% static 'js/base.js' %}"></script>
+  {% endblock %}
+
+  {% block extra_scripts %}
+  {% endblock %}
+
+  </body>
+  {% block footer %}
+  <footer>
+  </footer>
+  {% endblock %}
+</html>
